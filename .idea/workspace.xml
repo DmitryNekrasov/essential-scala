@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1dc34cbe-cbc9-41f8-a065-0ef84830921d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cats.sc" beforeDir="false" afterPath="$PROJECT_DIR$/src/cats.sc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/directors_case.sc" beforeDir="false" afterPath="$PROJECT_DIR$/src/directors_case.sc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/helloworld.sc" beforeDir="false" afterPath="$PROJECT_DIR$/src/helloworld.sc" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -155,7 +152,14 @@
       <option name="project" value="LOCAL" />
       <updated>1575891615277</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Pattern matching">
+      <created>1575909005371</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1575909005371</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -163,17 +167,19 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial commit" />
+    <MESSAGE value="Pattern matching" />
+    <option name="LAST_COMMIT_MESSAGE" value="Pattern matching" />
   </component>
   <component name="WindowStateProjectService">
     <state x="546" y="271" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1575741023736">
       <screen x="37" y="23" width="1643" height="1027" />
     </state>
     <state x="546" y="271" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/37.23.1643.1027@37.23.1643.1027" timestamp="1575741023736" />
-    <state x="437" y="-939" key="CommitChangelistDialog2" timestamp="1575891615045">
-      <screen x="-123" y="-1080" width="1920" height="1080" />
+    <state x="490" y="137" key="CommitChangelistDialog2" timestamp="1575909005235">
+      <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="437" y="-939" key="CommitChangelistDialog2/-123.-1080.1920.1080/0.0.1680.1050@-123.-1080.1920.1080" timestamp="1575891615045" />
+    <state x="490" y="137" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1575909005235" />
     <state width="1876" height="304" key="GridCell.Tab.0.bottom" timestamp="1575882088849">
       <screen x="-123" y="-1080" width="1920" height="1080" />
     </state>
@@ -200,10 +206,11 @@
     <state x="199" y="-1007" key="SettingsEditor/-123.-1080.1920.1080/0.0.1680.1050@-123.-1080.1920.1080" timestamp="1575877111471" />
     <state x="282" y="71" key="SettingsEditor/-123.-1080.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1575874289580" />
     <state x="313" y="92" key="SettingsEditor/37.23.1643.1027@37.23.1643.1027" timestamp="1575741202550" />
-    <state x="437" y="-800" key="Vcs.Push.Dialog.v2" timestamp="1575891769920">
-      <screen x="-123" y="-1080" width="1920" height="1080" />
+    <state x="490" y="272" key="Vcs.Push.Dialog.v2" timestamp="1575909013052">
+      <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="437" y="-800" key="Vcs.Push.Dialog.v2/-123.-1080.1920.1080/0.0.1680.1050@-123.-1080.1920.1080" timestamp="1575891769920" />
+    <state x="490" y="272" key="Vcs.Push.Dialog.v2/0.0.1680.1050@0.0.1680.1050" timestamp="1575909013052" />
     <state x="505" y="233" width="670" height="676" key="search.everywhere.popup" timestamp="1575908830388">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>

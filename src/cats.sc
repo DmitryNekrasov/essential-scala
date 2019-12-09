@@ -1,7 +1,11 @@
 case class Cat(name: String, colour: String, food: String)
 
 object ChipShop {
-  def willServe(cat: Cat) = cat.food.toLowerCase() == "chips"
+  def willServe(cat: Cat) =
+    cat match {
+      case Cat(_, _, "Chips") => true
+      case Cat(_, _, _) => false
+    }
 }
 
 val oswald = Cat("Oswald", "Black", "Milk")

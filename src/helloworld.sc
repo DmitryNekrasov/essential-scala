@@ -9,7 +9,7 @@ val mag: Int => Int => (Int, Double) => Double =
 
 def genericSum3[T]: T => T => T => String = v1 => v2 => v3 => s"$v1 $v2 $v3"
 
-val mad1: (Int => Int) => (Int => Int) = f => x => f(x) * 10
+val mad1: (Int => Int) => Int => Int = f => x => f(x) * 10
 
 val mad2: Int => (Int => Int) => Int = x => f => f(x) * 10
 

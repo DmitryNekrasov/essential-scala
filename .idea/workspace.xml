@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="1dc34cbe-cbc9-41f8-a065-0ef84830921d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/sbt__org_scala_lang_scala_library_2_13_1_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/helloworld-build.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/helloworld.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sbt.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/scala_compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build.sbt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/build.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/project/target/config-classes/$33a1c80bed0b426bfc76$.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/project/target/config-classes/$33a1c80bed0b426bfc76.cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/project/target/config-classes/$33a1c80bed0b426bfc76.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/target/config-classes/$3b5b9b8f0999d0fa549f$.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/target/config-classes/$3b5b9b8f0999d0fa549f.cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/target/config-classes/$3b5b9b8f0999d0fa549f.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/target/config-classes/$52f12c63e7f295fc5a78$.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/target/config-classes/$52f12c63e7f295fc5a78.cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/target/config-classes/$52f12c63e7f295fc5a78.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/target/config-classes/$5e84b22882fde65f658c$.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/target/config-classes/$5e84b22882fde65f658c.cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/target/config-classes/$5e84b22882fde65f658c.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/target/config-classes/$ff1597832c548edff79d$.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/target/config-classes/$ff1597832c548edff79d.cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/target/config-classes/$ff1597832c548edff79d.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/update/update_cache_2.12/inputs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/update/update_cache_2.12/output" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/target/streams/_global/_global/_global/streams/out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/target/streams/_global/_global/csrLogger/_global/streams/out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/target/streams/_global/csrConfiguration/_global/streams/out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/target/streams/_global/csrProject/_global/streams/out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/target/streams/_global/dependencyPositions/_global/streams/update_cache_2.12/input_dsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/target/streams/_global/dependencyPositions/_global/streams/update_cache_2.12/output_dsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/target/streams/_global/ivyConfiguration/_global/streams/out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/target/streams/_global/ivySbt/_global/streams/out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/target/streams/_global/moduleSettings/_global/streams/out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/target/streams/_global/projectDescriptors/_global/streams/out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/target/streams/_global/scalaCompilerBridgeScope/_global/streams/out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/target/streams/_global/update/_global/streams/out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/target/streams/compile/_global/_global/compileBinaryFileInputs/previous" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/target/streams/compile/_global/_global/compileOutputs/previous" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/target/streams/compile/_global/_global/compileSourceFileInputs/previous" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/target/streams/compile/_global/_global/dependencyClasspathFiles/previous" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/target/streams/compile/_global/_global/discoveredMainClasses/data" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/target/streams/compile/_global/_global/managedSourcePaths/previous" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/target/streams/compile/compile/_global/streams/out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/target/streams/compile/compileIncremental/_global/streams/export" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/target/streams/compile/compileIncremental/_global/streams/out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/target/streams/compile/copyResources/_global/streams/copy-resources" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/target/streams/compile/copyResources/_global/streams/out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/target/streams/compile/dependencyClasspath/_global/streams/export" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/target/streams/compile/exportedProducts/_global/streams/export" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/target/streams/compile/externalDependencyClasspath/_global/streams/export" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/target/streams/compile/internalDependencyClasspath/_global/streams/export" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/target/streams/compile/managedClasspath/_global/streams/export" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/target/streams/compile/unmanagedClasspath/_global/streams/export" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/target/streams/compile/unmanagedJars/_global/streams/export" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/target/streams/runtime/dependencyClasspath/_global/streams/export" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/target/streams/runtime/exportedProducts/_global/streams/export" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/target/streams/runtime/externalDependencyClasspath/_global/streams/export" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/target/streams/runtime/fullClasspath/_global/streams/export" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/target/streams/runtime/internalDependencyClasspath/_global/streams/export" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/target/streams/runtime/managedClasspath/_global/streams/export" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/target/streams/runtime/unmanagedClasspath/_global/streams/export" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/target/streams/runtime/unmanagedJars/_global/streams/export" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/cats.sc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/classes.sc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/counter.sc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/directors.sc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/directors_case.sc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/helloworld.sc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/Main.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/person.sc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/.history" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/scala-2.13/classes/Main$.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/scala-2.13/classes/Main.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/scala-2.13/update/update_cache_2.13/inputs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/scala-2.13/update/update_cache_2.13/output" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/streams/_global/_global/checkBuildSources/_global/inputFileStamps/previous" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/streams/_global/_global/checkBuildSources/_global/streams/out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/streams/_global/_global/csrLogger/_global/streams/out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/streams/_global/_global/dumpStructure/_global/streams/out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/streams/_global/csrConfiguration/_global/streams/out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/streams/_global/csrProject/_global/streams/out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/streams/_global/dependencyPositions/_global/streams/update_cache_2.13/input_dsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/streams/_global/dependencyPositions/_global/streams/update_cache_2.13/output_dsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/streams/_global/ivyConfiguration/_global/streams/out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/streams/_global/ivySbt/_global/streams/out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/streams/_global/moduleSettings/_global/streams/out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/streams/_global/projectDescriptors/_global/streams/out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/streams/_global/update/_global/streams/out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/streams/_global/updateClassifiers/_global/streams/out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/streams/_global/updateClassifiers/_global/streams/update_cache_2.13/inputs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/streams/_global/updateClassifiers/_global/streams/update_cache_2.13/output" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/streams/compile/externalDependencyClasspath/_global/streams/export" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/streams/compile/managedClasspath/_global/streams/export" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/streams/compile/unmanagedClasspath/_global/streams/export" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/streams/compile/unmanagedJars/_global/streams/export" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/streams/runtime/externalDependencyClasspath/_global/streams/export" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/streams/runtime/managedClasspath/_global/streams/export" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/streams/runtime/unmanagedClasspath/_global/streams/export" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/streams/runtime/unmanagedJars/_global/streams/export" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/streams/test/externalDependencyClasspath/_global/streams/export" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/streams/test/managedClasspath/_global/streams/export" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/streams/test/unmanagedClasspath/_global/streams/export" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/streams/test/unmanagedJars/_global/streams/export" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="SBT">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="helloworld" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="helloworld" type="f1a62948:ProjectNode" />
+                <item name="helloworld" type="2d1252cf:ModuleNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Scala Worksheet" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="1" />
+  </component>
+  <component name="ProjectId" id="1UZUCkI2FouIQkcMnY5q8v0EOfo" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="helloworld" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SbtLocalSettings">
+    <option name="availableProjects">
+      <map>
+        <entry>
+          <key>
+            <ExternalProjectPojo>
+              <option name="name" value="helloworld" />
+              <option name="path" value="$PROJECT_DIR$" />
+            </ExternalProjectPojo>
+          </key>
+          <value>
+            <list>
+              <ExternalProjectPojo>
+                <option name="name" value="helloworld [file:/Users/dmitrynekrasov/IdeaProjects/Scala/helloworld/]" />
+                <option name="path" value="$PROJECT_DIR$" />
+              </ExternalProjectPojo>
+              <ExternalProjectPojo>
+                <option name="name" value="helloworld-build" />
+                <option name="path" value="$PROJECT_DIR$/project" />
+              </ExternalProjectPojo>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="modificationStamps">
+      <map>
+        <entry key="$PROJECT_DIR$" value="3151126970916" />
+        <entry key="$PROJECT_DIR$/build.sbt" value="3913626171" />
+        <entry key="$PROJECT_DIR$/project/build.properties" value="1134086237" />
+      </map>
+    </option>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1dc34cbe-cbc9-41f8-a065-0ef84830921d" name="Default Changelist" comment="" />
+      <created>1575563485402</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1575563485402</updated>
+      <workItem from="1575563488115" duration="15805000" />
+      <workItem from="1575737348229" duration="1792000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="546" y="271" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1575741023736">
+      <screen x="37" y="23" width="1643" height="1027" />
+    </state>
+    <state x="546" y="271" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/37.23.1643.1027@37.23.1643.1027" timestamp="1575741023736" />
+    <state width="1876" height="304" key="GridCell.Tab.0.bottom" timestamp="1575882088849">
+      <screen x="-123" y="-1080" width="1920" height="1080" />
+    </state>
+    <state width="1876" height="304" key="GridCell.Tab.0.bottom/-123.-1080.1920.1080/0.0.1680.1050@-123.-1080.1920.1080" timestamp="1575882088849" />
+    <state width="1636" height="295" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1575791960661" />
+    <state width="1876" height="304" key="GridCell.Tab.0.center" timestamp="1575882088847">
+      <screen x="-123" y="-1080" width="1920" height="1080" />
+    </state>
+    <state width="1876" height="304" key="GridCell.Tab.0.center/-123.-1080.1920.1080/0.0.1680.1050@-123.-1080.1920.1080" timestamp="1575882088847" />
+    <state width="1636" height="295" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1575791960660" />
+    <state width="1876" height="304" key="GridCell.Tab.0.left" timestamp="1575882088845">
+      <screen x="-123" y="-1080" width="1920" height="1080" />
+    </state>
+    <state width="1876" height="304" key="GridCell.Tab.0.left/-123.-1080.1920.1080/0.0.1680.1050@-123.-1080.1920.1080" timestamp="1575882088845" />
+    <state width="1636" height="295" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1575791960660" />
+    <state width="1876" height="304" key="GridCell.Tab.0.right" timestamp="1575882088848">
+      <screen x="-123" y="-1080" width="1920" height="1080" />
+    </state>
+    <state width="1876" height="304" key="GridCell.Tab.0.right/-123.-1080.1920.1080/0.0.1680.1050@-123.-1080.1920.1080" timestamp="1575882088848" />
+    <state width="1636" height="295" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1575791960661" />
+    <state x="199" y="-1007" key="SettingsEditor" timestamp="1575877111471">
+      <screen x="-123" y="-1080" width="1920" height="1080" />
+    </state>
+    <state x="199" y="-1007" key="SettingsEditor/-123.-1080.1920.1080/0.0.1680.1050@-123.-1080.1920.1080" timestamp="1575877111471" />
+    <state x="282" y="71" key="SettingsEditor/-123.-1080.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1575874289580" />
+    <state x="313" y="92" key="SettingsEditor/37.23.1643.1027@37.23.1643.1027" timestamp="1575741202550" />
+    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup" timestamp="1575822001892">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1575822001892" />
+  </component>
+</project>

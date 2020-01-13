@@ -3,14 +3,35 @@ final case class Succeed(result: Int) extends CalculationResult
 final case class Fail(reason: String) extends CalculationResult
 
 object Calculator {
-  def add(a: Int, b: Int): CalculationResult = Succeed(a + b)
-  def sub(a: Int, b: Int): CalculationResult = Succeed(a - b)
-  def mul(a: Int, b: Int): CalculationResult = Succeed(a * b)
-  def div(a: Int, b: Int): CalculationResult = if (b == 0) Fail("Division by zero") else Succeed(a / b)
+  def +(calculationResult: CalculationResult, v2: Int): CalculationResult =
+    calculationResult match {
+      case Succeed(v1) => Succeed(v1 + v2)
+      case fail => fail
+    }
+
+  def -(calculationResult: CalculationResult, v2: Int): CalculationResult =
+    calculationResult match {
+      case Succeed(v1) => Succeed(v1 - v2)
+      case fail => fail
+    }
+
+  def *(calculationResult: CalculationResult, v2: Int): CalculationResult =
+    calculationResult match {
+      case Succeed(v1) => Succeed(v1 * v2)
+      case fail => fail
+    }
+
+  def /(calculationResult: CalculationResult, v2: Int): CalculationResult =
+    calculationResult match {
+      case Succeed(v1) => if (v2 != 0) Succeed(v1 / v2) else Fail("Division by zero")
+      case fail => fail
+    }
 }
 
-Calculator.add(1, 2)
-Calculator.sub(10, 7)
-Calculator.mul(2, 4)
-Calculator.div(21, 7)
-Calculator.div(11, 0)
+assert(Calculator.+(Succeed(1), 1) == Succeed(2))
+assert(Calculator.-(Succeed(1), 1) == Succeed(0))
+assert(Calculator.+(Fail("Badness"), 1) == Fail("Badness"))
+assert(Calculator./(Succeed(4), 0) == Fail("Division by zero"))
+assert(Calculator./(Fail("Badness"), 0) == Fail("Badness"))
+
+Calculator./(Calculator.+(Calculator.*(Succeed(4), 3), 4), 5)

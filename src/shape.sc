@@ -89,3 +89,5 @@ square.stats
 Draw(circle)
 Draw(rectangle)
 Draw(square)
+
+assert(Pink.isLight)

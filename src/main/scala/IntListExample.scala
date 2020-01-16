@@ -1,11 +1,12 @@
 import scala.annotation.tailrec
 
 object IntListExample extends App {
+
   sealed trait IntList {
-    final def length: Int = fold[Int](0, (_, accum) => 1 + accum)
-    final def product: Int = fold[Int](1, (head, accum) => head * accum)
-    final def sum : Int = fold[Int](0, (head, accum) => head + accum)
-    final def double: IntList = fold[IntList](End, (head, accum) => Pair(head * 2, accum))
+    final def length: Int = fold[Int](0) { (_, accum) => 1 + accum }
+    final def product: Int = fold[Int](1) { (head, accum) => head * accum }
+    final def sum: Int = fold[Int](0) { (head, accum) => head + accum }
+    final def double: IntList = fold[IntList](End) { (head, accum) => Pair(head * 2, accum) }
 
     final def asString: String =
       this match {
@@ -21,13 +22,15 @@ object IntListExample extends App {
         case Pair(head, tail) => tail.asString(s"$accum, $head")
       }
 
-    private def fold[A](end: A, f: (Int, A) => A): A =
+    private def fold[B](end: B)(pair: (Int, B) => B): B =
       this match {
         case End => end
-        case Pair(head, tail) => f(head, tail.fold(end, f))
+        case Pair(head, tail) => pair(head, tail.fold(end)(pair))
       }
   }
+
   case object End extends IntList
+
   final case class Pair(head: Int, tail: IntList) extends IntList
 
   val list = Pair(1, Pair(2, Pair(3, End)))

@@ -2,14 +2,22 @@ object Generics extends App {
   final case class Pair[A, B](one: A, two: B)
 
   sealed trait Sum[A, B] {
-    final def fold[C](left: A => C)(right: B => C): C =
+    final def fold[C](failure: A => C)(success: B => C): C =
       this match {
-        case Left(value) => left(value)
-        case Right(value) => right(value)
+        case Failure(a) => failure(a)
+        case Success(b) => success(b)
+      }
+
+    final def map[C](f: B => C) : Sum[A, C] = flatMap[C](value => Success(f(value)))
+
+    final def flatMap[C](f: B => Sum[A, C]): Sum[A, C] =
+      this match {
+        case Failure(a) => Failure(a)
+        case Success(b) => f(b)
       }
   }
-  final case class Left[A, B](value: A) extends Sum[A, B]
-  final case class Right[A, B](value: B) extends Sum[A, B]
+  final case class Failure[A, B](value: A) extends Sum[A, B]
+  final case class Success[A, B](value: B) extends Sum[A, B]
 
   sealed trait Maybe[A] {
     final def fold[B](empty: B)(full: A => B): B =
@@ -35,17 +43,17 @@ object Generics extends App {
   println(pair.one)
   println(pair.two)
 
-  val l1 = Left[Int, String](1).value
+  val l1 = Failure[Int, String](1).value
   println(l1)
 
-  val r1 = Right[Int, String]("foo").value
+  val r1 = Success[Int, String]("foo").value
   println(r1)
 
-  val sum: Sum[Int, String] = Right("foo")
+  val sum: Sum[Int, String] = Success("foo")
 
   val result = sum match {
-    case Left(value) => value.toString
-    case Right(value) => value
+    case Failure(value) => value.toString
+    case Success(value) => value
   }
 
   println(result)

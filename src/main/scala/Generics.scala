@@ -17,6 +17,14 @@ object Generics extends App {
         case Empty() => empty
         case Full(value) => full(value)
       }
+
+    final def map[B](f: A => B): Maybe[B] = flatMap[B](value => Full(f(value)))
+
+    final def flatMap[B](f: A => Maybe[B]): Maybe[B] =
+      this match {
+        case Empty() => Empty[B]()
+        case Full(value) => f(value)
+      }
   }
   final case class Full[A](value: A) extends Maybe[A]
   final case class Empty[A]() extends Maybe[A]
@@ -45,4 +53,10 @@ object Generics extends App {
   val perhaps1: Maybe[Int] = Empty[Int]()
   val perhaps2: Maybe[Int] = Full(1)
   println(perhaps1, perhaps2)
+
+  val list1 = List(Full(3), Full(2), Full(1)).map(maybe => if (maybe.value % 2 == 1) Empty() else maybe)
+  println(list1)
+
+  val list2 = List(Full(3), Full(2), Full(1)).map(maybe => maybe.flatMap[Int](x => if (x % 2 == 1) Empty() else Full(x)))
+  println(list2)
 }

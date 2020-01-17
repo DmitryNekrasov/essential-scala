@@ -2,40 +2,31 @@ import scala.math.sqrt
 
 object Calculator extends App {
   sealed trait Expression {
-    final def eval: CalculationResult =
+    final def eval: Sum[String, Double] =
       this match {
-        case Number(value) => SuccessQ(value)
-        case Addition(left, right) => calcTwoOperators(left, right, (a, b) => SuccessQ(a + b))
-        case Subtraction(left, right) => calcTwoOperators(left, right, (a, b) => SuccessQ(a - b))
-        case Multiply(left, right) => calcTwoOperators(left, right, (a, b) => SuccessQ(a * b))
-        case Division(left, right) => calcTwoOperators(left, right, (num, den) => if (den != 0) SuccessQ(num / den) else FailureQ("Division by zero"))
-        case SquareRoot(expr) =>
-          expr.eval match {
-            case SuccessQ(value) => if (value >= 0) SuccessQ(sqrt(value)) else FailureQ("Square root of negative number")
-            case fail => fail
-          }
+        case Number(value) => Success(value)
+        case Addition(left, right) => lift2(left, right, (l, r) => Success(l + r))
+        case Subtraction(left, right) => lift2(left, right, (l, r) => Success(l - r))
+        case Multiply(left, right) => lift2(left, right, (l, r) => Success(l * r))
+        case Division(left, right) => lift2(left, right, (l, r) => if (r != 0) Success(l / r) else Failure("Division by zero"))
+        case SquareRoot(value) => value.eval.flatMap { v =>
+          if (v > 0) Success(sqrt(v)) else Failure("Square root of negative number")
+        }
       }
 
-    private def calcTwoOperators(left: Expression, right: Expression, f: (Double, Double) => CalculationResult): CalculationResult =
-      left.eval match {
-        case SuccessQ(leftValue) =>
-          right.eval match {
-            case SuccessQ(rightValue) => f(leftValue, rightValue)
-            case fail => fail
-          }
-        case fail => fail
+    private final def lift2(left: Expression, right: Expression, f: (Double, Double) => Sum[String, Double]): Sum[String, Double] =
+      left.eval.flatMap { l =>
+        right.eval.flatMap { r =>
+          f(l, r)
+        }
       }
   }
+  final case class Number(value: Double) extends Expression
   final case class Addition(left: Expression, right: Expression) extends Expression
   final case class Subtraction(left: Expression, right: Expression) extends Expression
   final case class Multiply(left: Expression, right: Expression) extends Expression
   final case class Division(left: Expression, right: Expression) extends Expression
   final case class SquareRoot(expr: Expression) extends Expression
-  final case class Number(value: Double) extends Expression
-
-  sealed trait CalculationResult
-  final case class SuccessQ(value: Double) extends CalculationResult
-  final case class FailureQ(reason: String) extends CalculationResult
 
   sealed trait Sum[+A, +B] {
     final def fold[C](failure: A => C)(success: B => C): C =

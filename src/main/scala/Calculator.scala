@@ -29,22 +29,14 @@ object Calculator extends App {
   final case class SquareRoot(expr: Expression) extends Expression
 
   sealed trait Sum[+A, +B] {
+    final def map[C](f: B => C): Sum[A, C] = flatMap(v => Success(f(v)))
+
+    final def flatMap[AA >: A, C](f: B => Sum[AA, C]): Sum[AA, C] = fold[Sum[AA, C]](Failure(_))(f(_))
+
     final def fold[C](failure: A => C)(success: B => C): C =
       this match {
         case Failure(value) => failure(value)
         case Success(value) => success(value)
-      }
-
-    final def flatMap[AA >: A, C](f: B => Sum[AA, C]): Sum[AA, C] =
-      this match {
-        case Failure(value) => Failure(value)
-        case Success(value) => f(value)
-      }
-
-    final def map[C](f: B => C): Sum[A, C] =
-      this match {
-        case Failure(value) => Failure(value)
-        case Success(value) => Success(f(value))
       }
   }
   final case class Failure[A](a: A) extends Sum[A, Nothing]

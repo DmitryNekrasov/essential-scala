@@ -43,5 +43,8 @@ object Calculator extends App {
   final case class Success[B](b: B) extends Sum[Nothing, B]
 
   val expr = Addition(Division(Multiply(SquareRoot(Addition(Number(9), Subtraction(Addition(Number(4), Number(6)), Number(3)))), Number(-1)), Number(10)), Number(100))
-  println(expr.eval)
+  val result = expr.eval
+  println(result)
+
+  assert(result == Success(99.6))
 }

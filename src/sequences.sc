@@ -13,3 +13,5 @@ seq ++ Seq(10, 20, 30)
 val list = 11 :: 22 :: 33 :: Nil ::: 111 :: Nil
 
 val vec = Vector(1, 2, 3)
+
+val str = List(1, 2, 3, 4, 5).mkString("[", ", ", "]")

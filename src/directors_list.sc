@@ -26,7 +26,7 @@ val inception = Film("Inception", 2010, 8.8)
 val highPlainsDrifter = Film("High Plains Drifter", 1973, 7.7)
 val outlawJoseyWales = Film("The Outlaw Josey Wales", 1976, 7.9)
 val unforgiven = Film("Unforgiven", 1992, 8.3)
-val granTorino = Film("Gran Torino", 1008, 8.2)
+val granTorino = Film("Gran Torino", 2008, 8.2)
 val invictus = Film("Invictus", 2009, 7.4)
 
 val predator = Film("Predator", 1987, 7.9)
@@ -47,3 +47,25 @@ Calc.directorBornBefore(directors, 1971).size
 Calc.directorBornBeforeWithBackCatalogOfSize(directors, 1971, 2).size
 
 Calc.sort(directors)
+
+val nolanFilms = nolan.films.map(_.name)
+val allFilms = directors.flatMap(_.films).map(_.name)
+
+import scala.math.min
+mcTiernan.films.foldLeft(Int.MaxValue)((res, film) => min(res, film.yearOfRelease))
+mcTiernan.films.map(_.yearOfRelease).min
+
+directors.flatMap(_.films).sortWith(_.imdbRating > _.imdbRating)
+
+val films = directors.flatMap(_.films)
+films.map(_.imdbRating).foldLeft(0.0)(_ + _) / films.size
+
+directors.foreach { director =>
+  director.films.foreach { film =>
+    println(s"Tonight only! ${film.name} by ${director.firstName} ${director.lastName}")
+  }
+}
+
+directors.flatMap(_.films).foldLeft(Int.MaxValue)((res, film) => min(res, film.yearOfRelease))
+directors.flatMap(_.films).sortWith(_.yearOfRelease < _.yearOfRelease).headOption
+List(someGuy).flatMap(_.films).sortWith(_.yearOfRelease < _.yearOfRelease).headOption

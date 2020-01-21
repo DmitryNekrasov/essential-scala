@@ -69,3 +69,20 @@ directors.foreach { director =>
 directors.flatMap(_.films).foldLeft(Int.MaxValue)((res, film) => min(res, film.yearOfRelease))
 directors.flatMap(_.films).sortWith(_.yearOfRelease < _.yearOfRelease).headOption
 List(someGuy).flatMap(_.films).sortWith(_.yearOfRelease < _.yearOfRelease).headOption
+
+for(film <- nolan.films) yield film.name
+
+for {
+  director <- directors
+  film <- director.films
+} yield film.name
+
+(for {
+  director <- directors
+  film <- director.films
+} yield film).sortWith(_.imdbRating < _.imdbRating)
+
+for {
+  director <- directors
+  film <- director.films
+} println(s"Tonight only! ${film.name} by ${director.firstName} ${director.lastName}")

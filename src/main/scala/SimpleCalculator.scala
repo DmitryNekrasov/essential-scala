@@ -28,21 +28,17 @@ object SimpleCalculator extends App {
   val v1 = calculator("15", "+", "100")
   println(v1)
 
-  assert(calculator("15", "+", "100").contains(115))
-  assert(calculator("50", "-", "28").contains(22))
-  assert(calculator("7", "*", "20").contains(140))
-  assert(calculator("1305", "/", "15").contains(87))
-  assert(calculator("1305", "/", "0").isEmpty)
-  assert(calculator("15", "_", "100").isEmpty)
-  assert(calculator("aaa", "+", "100").isEmpty)
-  assert(calculator("15", "+", "qqq").isEmpty)
+  def doAsserts(f: (String, String, String) => Option[Int]): Unit = {
+    assert(f("15", "+", "100").contains(115))
+    assert(f("50", "-", "28").contains(22))
+    assert(f("7", "*", "20").contains(140))
+    assert(f("1305", "/", "15").contains(87))
+    assert(f("1305", "/", "0").isEmpty)
+    assert(f("15", "_", "100").isEmpty)
+    assert(f("aaa", "+", "100").isEmpty)
+    assert(f("15", "+", "qqq").isEmpty)
+  }
 
-  assert(calculatorMap("15", "+", "100").contains(115))
-  assert(calculatorMap("50", "-", "28").contains(22))
-  assert(calculatorMap("7", "*", "20").contains(140))
-  assert(calculatorMap("1305", "/", "15").contains(87))
-  assert(calculatorMap("1305", "/", "0").isEmpty)
-  assert(calculatorMap("15", "_", "100").isEmpty)
-  assert(calculatorMap("aaa", "+", "100").isEmpty)
-  assert(calculatorMap("15", "+", "qqq").isEmpty)
+  doAsserts(calculator)
+  doAsserts(calculatorMap)
 }

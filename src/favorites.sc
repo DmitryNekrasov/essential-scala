@@ -6,7 +6,7 @@ val favoriteCats = Map( "Alice" -> "Long Cat", "Charlie" -> "Ceiling Cat", "Edit
 def favoriteColor(name: String): String =
   favoriteColors.getOrElse(name, "beige")
 
-def printColors() =
+def printColors(): Unit =
   for (name <- people) println(s"$name like ${favoriteColor(name)}")
 
 def lookup[A](name: String, map: Map[String, A]): Option[A] =

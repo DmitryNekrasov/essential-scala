@@ -29,3 +29,9 @@ for {
   b <- try2
   c <- try3
 } yield a + b + c
+
+val seqOfSeq = Seq(Seq(1, 2), Seq(3, 4, 5), Seq(6), Seq(7), Seq())
+for {
+  seq <- seqOfSeq
+  elem <- seq
+} yield elem

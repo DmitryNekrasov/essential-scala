@@ -5,7 +5,7 @@ object MarkovChain extends App {
       Distribution(events.map { case (a, p) => f(a) -> p })
 
     def flatMap[B](f: A => Distribution[B]): Distribution[B] =
-      ???
+      Distribution(events.flatMap { case (a, p1) => f(a).events.map { case (b, p2) => b -> p1 * p2 } }).compact.normalize
 
     def normalize: Distribution[A] = {
       val totalP = events.map { case (_, p) => p }.sum

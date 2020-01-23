@@ -21,9 +21,11 @@ object MarkovChain extends App {
     }
   }
 
-  def uniform[A](list: List[A]): Distribution[A] = {
-    val p = 1.0 / list.size
-    Distribution(list.map(_ -> p))
+  object Distribution {
+    def uniform[A](list: List[A]): Distribution[A] = {
+      val p = 1.0 / list.size
+      Distribution(list.map(_ -> p))
+    }
   }
 
   def verbsFor(subject: String): List[String] =

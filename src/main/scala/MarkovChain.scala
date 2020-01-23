@@ -1,10 +1,24 @@
 object MarkovChain extends App {
+
   final case class Distribution[A](events: List[(A, Double)]) {
+    def map[B](f: A => B): Distribution[B] =
+      Distribution(events.map { case (a, p) => f(a) -> p })
+
     def flatMap[B](f: A => Distribution[B]): Distribution[B] =
       ???
 
-    def map[B](f: A => B): Distribution[B] =
-      Distribution(events.map { case (a, p) => f(a) -> p })
+    def normalize: Distribution[A] = {
+      val totalP = events.map { case (_, p) => p }.sum
+      Distribution(events.map { case (a, p) => a -> p / totalP })
+    }
+
+    def compact: Distribution[A] = {
+      def prob(a: A): Double =
+        events.filter { case (x, _) => x == a }.map { case (_, p) => p }.sum
+
+      val distinct = events.map { case (a, _) => a }.distinct
+      Distribution(distinct.map(a => a -> prob(a)))
+    }
   }
 
   def uniform[A](list: List[A]): Distribution[A] = {
